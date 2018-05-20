@@ -1,0 +1,9 @@
+.screen{
+    background-color:white;
+    height:360px;
+    width:500px; 
+    position: absolute;
+    top:20px;
+    left:619px;
+    z-index: 1;
+}

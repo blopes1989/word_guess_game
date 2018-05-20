@@ -1,14 +1,50 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-<link rel="stylesheet" type="text" href="assets/css/reset.css">
-<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-iMvB1cubutqnCw/Xlf3A1lEXHojPMC7dETFR9CYfYENKn8yw6QlyL+BaYmPXEjmo" crossorigin="anonymous">
-<link rel="stylesheet" type="text" href="assets/css/style.css">
-
-
+    <link rel="stylesheet" type="text" href="assets/css/reset.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-iMvB1cubutqnCw/Xlf3A1lEXHojPMC7dETFR9CYfYENKn8yw6QlyL+BaYmPXEjmo"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
+
 <body>
+    <div class=container.fluid>
+        <div class="col-12">
+            <div class=screen>
+                <h10>
+                    Welcome To The Word Guessing Game. Try to guess the word below. To guess a letter press the corresponding letter on the keyboard.
+                    Ten wrong guesses and your game is over!</p>
+                    <div class="currently-guessing">Current Word
+                        <p id="guessed"></p>
+                    </div>
+                    <div class="win-loss">Your wins:
+                        <p id="wins"></p>
+                    </div>
+                    <div class="win-loss">Your losses:
+                        <p id="losses"></p>
+                    </div>
+            <div class="gameText2">
+                <div class="guess-text">Number of guesses left:
+                    <p id="guess-left"></p>
+                </div>
+                <div class="guess-text">Letters already guessed:
+                    <p id="allGuesses"></p>
+                </div>
+                </h10>
+                </div>
+
+
+
+
+            </div>
+            <img id="backgroundimage" src="https://raw.githubusercontent.com/blopes1989/word_guess_game/master/assets/images/millionairebackground.jpg">
+        </div>
+    </div>
+
+
 
 </body>
-
+<script src="assets/javascript/game.js"> </script>
 
 </html>

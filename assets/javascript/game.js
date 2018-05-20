@@ -1,10 +1,10 @@
             var guesses = 0;
-            var tryRemaining = 10;
+            var trysRemaining = 10;
             var wins = 0;
             var losses = 0;
             var newRound;
           var keyPress;
-          var emptyArr = [];
+          var emptyArray = [];
           var lettersGuessed = [];
           var victory = "";
               var currentWins = document.getElementById("wins");
@@ -17,13 +17,13 @@
                   var wordBank = ["black", "blue", "green", "orange", "red", "yellow", "purple", "brown",];
                   newRound = wordBank[Math.floor(Math.random() * wordBank.length)];
                   for (i=0;i<newRound.length;i++){
-                      emptyArr.push("-");
+                      emptyArray.push("-");
                   }
                   var guessLeft = document.getElementById("guess-left")
-                  guessLeft.textContent = tryRemaining;
+                  guessLeft.textContent = trysRemaining;
                   var lastGuess = document.getElementById("allGuesses");
                   var currentlyGuessing = document.getElementById("guessed");
-                  currentlyGuessing.textContent = emptyArr.join(" ");
+                  currentlyGuessing.textContent = emptyArray.join(" ");
 
                   
                       document.onkeyup = function(event) {
@@ -32,52 +32,52 @@
                           if (newRound.indexOf(keyPress) > -1){
                               for (i=0;i<newRound.length;i++){
                                   if (keyPress == newRound[i]){
-                                  emptyArr[i] = keyPress;
+                                  emptyArray[i] = keyPress;
                                    }
                               }  
-                              currentlyGuessing.textContent = emptyArr.join(" ");
-                              victory = emptyArr.join("");
+                              currentlyGuessing.textContent = emptyArray.join(" ");
+                              victory = emptyArray.join("");
                             
                           } 
                           else if (lettersGuessed.includes(keyPress)==false && newRound.includes(keyPress) == false){
                           
                               lettersGuessed.push(keyPress);
                               lastGuess.textContent = lettersGuessed.join(" ");
-                              tryRemaining--;
-                              guessLeft.textContent = tryRemaining;
+                              trysRemaining--;
+                              guessLeft.textContent = trysRemaining;
                           }
                           if (victory == newRound){
-                              alert("Winner");
-                              tryRemaining = 10;
+                              alert("Winner, Keep Going!");
+                              trysRemaining = 10;
                               wins++
                               victory = "";
                               currentWins.textContent = wins;
-                              guessLeft.textContent = tryRemaining;
-                              emptyArr = [];
+                              guessLeft.textContent = trysRemaining;
+                              emptyArray = [];
                               lettersGuessed = [];
                               newRound = wordBank[Math.floor(Math.random() * wordBank.length)];
                               for (i=0;i<newRound.length;i++){
-                                   emptyArr.push("-");
+                                   emptyArray.push("-");
                               } 
-                              currentlyGuessing.textContent = emptyArr.join(" ");
+                              currentlyGuessing.textContent = emptyArray.join(" ");
                               lastGuess.textContent = "";
                                 
                           }
                           
-                          if(tryRemaining < 1){
+                          if(trysRemaining < 1){
                               alert("Sorry, try again.");
-                              tryRemaining = 10;
+                              trysRemaining = 10;
                               losses++
                               victory = "";
                               currentLoss.textContent = losses;
-                              guessLeft.textContent = tryRemaining;
-                              emptyArr = [];
+                              guessLeft.textContent = trysRemaining;
+                              emptyArray = [];
                               lettersGuessed = [];
                               newRound = wordBank[Math.floor(Math.random() * wordBank.length)];
                               for (i=0;i<newRound.length;i++){
-                                   emptyArr.push("-");
+                                   emptyArray.push("-");
                               } 
-                              currentlyGuessing.textContent = emptyArr.join(" ");
+                              currentlyGuessing.textContent = emptyArray.join(" ");
                               lastGuess.textContent = lettersGuessed.join(" ");
                             
                           }
